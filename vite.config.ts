@@ -8,6 +8,9 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
-    allowedHosts: ["fintrack-yb72.onrender.com"],
-  },
+  host: "0.0.0.0",
+  port: Number(process.env.PORT) || 8080,
+  allowedHosts: ["fintrack-yb72.onrender.com"],
+},
+
 });
